@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+	<classPathEntry location="D:\Documents\tool\Oracle\instantclient_11_2\ojdbc6.jar" />
+	<classPathEntry location="D:\Documents\tool\potgresql\postgresql-9.1-901.jdbc4.jar" />
+  <context id="context1" >
+  
+  
+    <!--
+            生成するクラスオブジェクトにタイムスタンプを付与するかどうかを設定します。
+      value="true" の場合は生成しません。
+              http://hit-techblog.blogspot.jp/2014/03/mybatis-2.html
+    -->
+    <commentGenerator>
+        <property name="suppressDate" value="true" />
+    </commentGenerator>
+    
+    <!--  http://jyukutyo.hatenablog.com/entry/20110930/1317425066 -->
+    <jdbcConnection driverClass="org.postgresql.Driver"
+    			connectionURL="jdbc:postgresql://rizdb.cmzzvvfvisux.ap-northeast-1.rds.amazonaws.com:5432/billsys"
+    			userId="masteryoda" password="r1d2r1d2" />
+    <javaModelGenerator targetPackage="net.newbiz.ebil.billing.dao.model"
+    			targetProject="D:\Documents\java\test2\ebil-billing\src\main\java" >
+    	<property name="rootClass" value="net.newbiz.ebil.billing.dao.model.DtoBase"/>
+    </javaModelGenerator>
+    <sqlMapGenerator targetPackage="net.newbiz.ebil.billing.dao.sqlmap"
+    			targetProject="D:\Documents\java\test2\ebil-billing\src\main\resources" />
+    <javaClientGenerator targetPackage="net.newbiz.ebil.billing.dao"
+    			targetProject="D:\Documents\java\test2\ebil-billing\src\main\java"
+    			type="XMLMAPPER" implementationPackage="net.newbiz.ebil.billing.dao.impl">
+    </javaClientGenerator>
+    
+    <!-- <table tableName="TE79" >
+      <columnOverride column="???" property="???" />
+    </table> -->
+    <table tableName="t_cust"/>
+    <table tableName="t_chg_rsv"/>
+    <table tableName="t_cust_addr"/>
+    <table tableName="t_cust_payway"/>
+    <table tableName="m_payway"/>
+    <table tableName="t_cust_bank"/>
+    <table tableName="t_cust_pay_card"/>
+    <table tableName="t_cust_link"/>
+    <table tableName="t_bill"/>
+    <table tableName="t_bill_dtl"/>
+    <table tableName="m_unit_cd"/>
+    <table tableName="m_fee_plan"/>
+    <table tableName="t_setoff_history"/>
+    <table tableName="t_pay"/>
+    <table tableName="t_cust_pay_link"/>
+    <table tableName="t_pay_sub_card"/>
+    <table tableName="t_pay_sub_bank"/>
+    <table tableName="t_pay_sub_cvs"/>
+  </context>
+</generatorConfiguration>
