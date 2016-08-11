@@ -20,13 +20,13 @@
     			connectionURL="jdbc:postgresql://rizdb.cmzzvvfvisux.ap-northeast-1.rds.amazonaws.com:5432/billsys"
     			userId="masteryoda" password="r1d2r1d2" />
     <javaModelGenerator targetPackage="net.newbiz.ebil.billing.dao.model"
-    			targetProject="D:\Documents\java\test2\ebil-billing\src\main\java" >
+    			targetProject="D:\Documents\java\ebilsys\ebil-billing\src\main\java" >
     	<property name="rootClass" value="net.newbiz.ebil.billing.dao.model.DtoBase"/>
     </javaModelGenerator>
     <sqlMapGenerator targetPackage="net.newbiz.ebil.billing.dao.sqlmap"
-    			targetProject="D:\Documents\java\test2\ebil-billing\src\main\resources" />
+    			targetProject="D:\Documents\java\ebilsys\ebil-billing\src\main\resources" />
     <javaClientGenerator targetPackage="net.newbiz.ebil.billing.dao"
-    			targetProject="D:\Documents\java\test2\ebil-billing\src\main\java"
+    			targetProject="D:\Documents\java\ebilsys\ebil-billing\src\main\java"
     			type="XMLMAPPER" implementationPackage="net.newbiz.ebil.billing.dao.impl">
     </javaClientGenerator>
     
